@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# list of design files to be compiled
+
+ver_files=("../../source/top_module.v"
+	  "../../source/write_control_logic.v"
+	  "../../source/read_control_logic.v"
+	  "../../source/gray_code_sync.v"
+	  "../../source/fifo_memory.v"
+	  "../testbench/top_module_tb.v")	

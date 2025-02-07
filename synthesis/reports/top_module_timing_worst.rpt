@@ -1,0 +1,782 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 5
+        -max_paths 5
+        -sort_by group
+Design : top_module
+Version: O-2018.06-SP1
+Date   : Fri Jan 31 22:54:15 2025
+****************************************
+
+Operating Conditions: slow   Library: IBM_CMOS8HP_SS125
+Wire Load Model Mode: enclosed
+
+  Startpoint: read_ctrl/read_addr_reg[2]
+              (rising edge-triggered flip-flop clocked by read_clk)
+  Endpoint: memory/read_data_reg[2]
+            (rising edge-triggered flip-flop clocked by read_clk)
+  Path Group: read_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  read_control_logic 500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  fifo_memory        500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock read_clk (rise edge)                             0.000      0.000
+  clock network delay (ideal)                            1.000      1.000
+  read_ctrl/read_addr_reg[2]/CLK (DFFR_E)                0.000      1.000 r
+  read_ctrl/read_addr_reg[2]/Q (DFFR_E)                  0.315      1.315 r
+  read_ctrl/U41/Z (INVERT_I)                             0.050      1.365 f
+  read_ctrl/U14/Z (INVERT_M)                             0.050      1.414 r
+  read_ctrl/read_addr[2] (read_control_logic)            0.000      1.414 r
+  memory/read_addr[2] (fifo_memory)                      0.000      1.414 r
+  memory/U181/Z (NOR2_D)                                 0.065      1.479 f
+  memory/U3/Z (BUFFER_I)                                 0.073      1.552 f
+  memory/U2/Z (INVERT_H)                                 0.049      1.600 r
+  memory/U31/Z (INVERT_K)                                0.048      1.648 f
+  memory/U30/Z (INVERT_K)                                0.048      1.696 r
+  memory/U92/Z (INVERT_I)                                0.047      1.743 f
+  memory/U93/Z (AOI2222_H)                               0.168      1.912 r
+  memory/U60/Z (BUFFER_F)                                0.062      1.974 r
+  memory/U33/Z (INVERT_D)                                0.050      2.024 f
+  memory/U5/Z (INVERT_E)                                 0.052      2.077 r
+  memory/U246/Z (NOR2_C)                                 0.081      2.157 f
+  memory/U248/Z (NOR2_C)                                 0.087      2.244 r
+  memory/U251/Z (NOR2_C)                                 0.093      2.337 f
+  memory/U253/Z (NOR2_C)                                 0.082      2.419 r
+  memory/U249/Z (INVERT_C)                               0.076      2.495 f
+  memory/read_data_reg[2]/D (DFFR_E)                     0.000      2.495 f
+  data arrival time                                                 2.495
+
+  clock read_clk (rise edge)                            17.000     17.000
+  clock network delay (ideal)                            1.000     18.000
+  clock uncertainty                                     -0.700     17.300
+  memory/read_data_reg[2]/CLK (DFFR_E)                   0.000     17.300 r
+  library setup time                                    -0.239     17.061
+  data required time                                               17.061
+  --------------------------------------------------------------------------
+  data required time                                               17.061
+  data arrival time                                                -2.495
+  --------------------------------------------------------------------------
+  slack (MET)                                                      14.566
+
+
+  Startpoint: read_ctrl/read_addr_reg[1]
+              (rising edge-triggered flip-flop clocked by read_clk)
+  Endpoint: memory/read_data_reg[2]
+            (rising edge-triggered flip-flop clocked by read_clk)
+  Path Group: read_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  read_control_logic 500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  fifo_memory        500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock read_clk (rise edge)                             0.000      0.000
+  clock network delay (ideal)                            1.000      1.000
+  read_ctrl/read_addr_reg[1]/CLK (DFFR_E)                0.000      1.000 r
+  read_ctrl/read_addr_reg[1]/Q (DFFR_E)                  0.305      1.305 r
+  read_ctrl/U28/Z (INVERT_H)                             0.045      1.350 f
+  read_ctrl/U29/Z (INVERT_I)                             0.051      1.401 r
+  read_ctrl/read_addr[1] (read_control_logic)            0.000      1.401 r
+  memory/read_addr[1] (fifo_memory)                      0.000      1.401 r
+  memory/U181/Z (NOR2_D)                                 0.058      1.459 f
+  memory/U3/Z (BUFFER_I)                                 0.073      1.532 f
+  memory/U2/Z (INVERT_H)                                 0.049      1.581 r
+  memory/U31/Z (INVERT_K)                                0.048      1.629 f
+  memory/U30/Z (INVERT_K)                                0.048      1.676 r
+  memory/U92/Z (INVERT_I)                                0.047      1.724 f
+  memory/U93/Z (AOI2222_H)                               0.168      1.892 r
+  memory/U60/Z (BUFFER_F)                                0.062      1.954 r
+  memory/U33/Z (INVERT_D)                                0.050      2.005 f
+  memory/U5/Z (INVERT_E)                                 0.052      2.057 r
+  memory/U246/Z (NOR2_C)                                 0.081      2.138 f
+  memory/U248/Z (NOR2_C)                                 0.087      2.225 r
+  memory/U251/Z (NOR2_C)                                 0.093      2.317 f
+  memory/U253/Z (NOR2_C)                                 0.082      2.399 r
+  memory/U249/Z (INVERT_C)                               0.076      2.475 f
+  memory/read_data_reg[2]/D (DFFR_E)                     0.000      2.475 f
+  data arrival time                                                 2.475
+
+  clock read_clk (rise edge)                            17.000     17.000
+  clock network delay (ideal)                            1.000     18.000
+  clock uncertainty                                     -0.700     17.300
+  memory/read_data_reg[2]/CLK (DFFR_E)                   0.000     17.300 r
+  library setup time                                    -0.239     17.061
+  data required time                                               17.061
+  --------------------------------------------------------------------------
+  data required time                                               17.061
+  data arrival time                                                -2.475
+  --------------------------------------------------------------------------
+  slack (MET)                                                      14.585
+
+
+  Startpoint: read_ctrl/read_addr_reg[2]
+              (rising edge-triggered flip-flop clocked by read_clk)
+  Endpoint: memory/read_data_reg[2]
+            (rising edge-triggered flip-flop clocked by read_clk)
+  Path Group: read_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  read_control_logic 500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  fifo_memory        500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock read_clk (rise edge)                             0.000      0.000
+  clock network delay (ideal)                            1.000      1.000
+  read_ctrl/read_addr_reg[2]/CLK (DFFR_E)                0.000      1.000 r
+  read_ctrl/read_addr_reg[2]/Q (DFFR_E)                  0.315      1.315 r
+  read_ctrl/U41/Z (INVERT_I)                             0.050      1.365 f
+  read_ctrl/U14/Z (INVERT_M)                             0.050      1.414 r
+  read_ctrl/read_addr[2] (read_control_logic)            0.000      1.414 r
+  memory/read_addr[2] (fifo_memory)                      0.000      1.414 r
+  memory/U209/Z (NOR2_D)                                 0.072      1.487 f
+  memory/U85/Z (BUFFER_K)                                0.079      1.565 f
+  memory/U23/Z (INVERT_J)                                0.047      1.612 r
+  memory/U231/Z (INVERT_O)                               0.048      1.660 f
+  memory/U93/Z (AOI2222_H)                               0.151      1.811 r
+  memory/U60/Z (BUFFER_F)                                0.062      1.873 r
+  memory/U33/Z (INVERT_D)                                0.050      1.923 f
+  memory/U5/Z (INVERT_E)                                 0.052      1.976 r
+  memory/U246/Z (NOR2_C)                                 0.081      2.056 f
+  memory/U248/Z (NOR2_C)                                 0.087      2.143 r
+  memory/U251/Z (NOR2_C)                                 0.093      2.236 f
+  memory/U253/Z (NOR2_C)                                 0.082      2.318 r
+  memory/U249/Z (INVERT_C)                               0.076      2.394 f
+  memory/read_data_reg[2]/D (DFFR_E)                     0.000      2.394 f
+  data arrival time                                                 2.394
+
+  clock read_clk (rise edge)                            17.000     17.000
+  clock network delay (ideal)                            1.000     18.000
+  clock uncertainty                                     -0.700     17.300
+  memory/read_data_reg[2]/CLK (DFFR_E)                   0.000     17.300 r
+  library setup time                                    -0.239     17.061
+  data required time                                               17.061
+  --------------------------------------------------------------------------
+  data required time                                               17.061
+  data arrival time                                                -2.394
+  --------------------------------------------------------------------------
+  slack (MET)                                                      14.667
+
+
+  Startpoint: read_ctrl/read_addr_reg[1]
+              (rising edge-triggered flip-flop clocked by read_clk)
+  Endpoint: memory/read_data_reg[2]
+            (rising edge-triggered flip-flop clocked by read_clk)
+  Path Group: read_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  read_control_logic 500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  fifo_memory        500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock read_clk (rise edge)                             0.000      0.000
+  clock network delay (ideal)                            1.000      1.000
+  read_ctrl/read_addr_reg[1]/CLK (DFFR_E)                0.000      1.000 r
+  read_ctrl/read_addr_reg[1]/Q (DFFR_E)                  0.305      1.305 r
+  read_ctrl/U28/Z (INVERT_H)                             0.045      1.350 f
+  read_ctrl/U29/Z (INVERT_I)                             0.051      1.401 r
+  read_ctrl/read_addr[1] (read_control_logic)            0.000      1.401 r
+  memory/read_addr[1] (fifo_memory)                      0.000      1.401 r
+  memory/U283/Z (NOR2_D)                                 0.070      1.471 f
+  memory/U230/Z (BUFFER_J)                               0.076      1.547 f
+  memory/U94/Z (INVERT_K)                                0.049      1.596 r
+  memory/U79/Z (INVERT_M)                                0.044      1.639 f
+  memory/U93/Z (AOI2222_H)                               0.166      1.805 r
+  memory/U60/Z (BUFFER_F)                                0.062      1.867 r
+  memory/U33/Z (INVERT_D)                                0.050      1.918 f
+  memory/U5/Z (INVERT_E)                                 0.052      1.970 r
+  memory/U246/Z (NOR2_C)                                 0.081      2.051 f
+  memory/U248/Z (NOR2_C)                                 0.087      2.138 r
+  memory/U251/Z (NOR2_C)                                 0.093      2.230 f
+  memory/U253/Z (NOR2_C)                                 0.082      2.312 r
+  memory/U249/Z (INVERT_C)                               0.076      2.388 f
+  memory/read_data_reg[2]/D (DFFR_E)                     0.000      2.388 f
+  data arrival time                                                 2.388
+
+  clock read_clk (rise edge)                            17.000     17.000
+  clock network delay (ideal)                            1.000     18.000
+  clock uncertainty                                     -0.700     17.300
+  memory/read_data_reg[2]/CLK (DFFR_E)                   0.000     17.300 r
+  library setup time                                    -0.239     17.061
+  data required time                                               17.061
+  --------------------------------------------------------------------------
+  data required time                                               17.061
+  data arrival time                                                -2.388
+  --------------------------------------------------------------------------
+  slack (MET)                                                      14.672
+
+
+  Startpoint: read_ctrl/read_addr_reg[2]
+              (rising edge-triggered flip-flop clocked by read_clk)
+  Endpoint: memory/read_data_reg[1]
+            (rising edge-triggered flip-flop clocked by read_clk)
+  Path Group: read_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  read_control_logic 500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  fifo_memory        500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock read_clk (rise edge)                             0.000      0.000
+  clock network delay (ideal)                            1.000      1.000
+  read_ctrl/read_addr_reg[2]/CLK (DFFR_E)                0.000      1.000 r
+  read_ctrl/read_addr_reg[2]/Q (DFFR_E)                  0.315      1.315 r
+  read_ctrl/U41/Z (INVERT_I)                             0.050      1.365 f
+  read_ctrl/U14/Z (INVERT_M)                             0.050      1.414 r
+  read_ctrl/read_addr[2] (read_control_logic)            0.000      1.414 r
+  memory/read_addr[2] (fifo_memory)                      0.000      1.414 r
+  memory/U181/Z (NOR2_D)                                 0.065      1.479 f
+  memory/U3/Z (BUFFER_I)                                 0.073      1.552 f
+  memory/U2/Z (INVERT_H)                                 0.049      1.600 r
+  memory/U31/Z (INVERT_K)                                0.048      1.648 f
+  memory/U30/Z (INVERT_K)                                0.048      1.696 r
+  memory/U92/Z (INVERT_I)                                0.047      1.743 f
+  memory/U76/Z (AOI2222_I)                               0.167      1.911 r
+  memory/U43/Z (INVERT_D)                                0.047      1.958 f
+  memory/U183/Z (AND2_H)                                 0.082      2.039 f
+  memory/U184/Z (INVERT_D)                               0.056      2.095 r
+  memory/U19/Z (INVERT_E)                                0.052      2.147 f
+  memory/U182/Z (INVERT_E)                               0.058      2.205 r
+  memory/U74/Z (NAND2BAL_E)                              0.056      2.261 f
+  memory/U73/Z (AO22_F)                                  0.127      2.388 f
+  memory/read_data_reg[1]/D (DFFR_E)                     0.000      2.389 f
+  data arrival time                                                 2.389
+
+  clock read_clk (rise edge)                            17.000     17.000
+  clock network delay (ideal)                            1.000     18.000
+  clock uncertainty                                     -0.700     17.300
+  memory/read_data_reg[1]/CLK (DFFR_E)                   0.000     17.300 r
+  library setup time                                    -0.235     17.065
+  data required time                                               17.065
+  --------------------------------------------------------------------------
+  data required time                                               17.065
+  data arrival time                                                -2.389
+  --------------------------------------------------------------------------
+  slack (MET)                                                      14.676
+
+
+  Startpoint: memory/read_data_reg[4]
+              (rising edge-triggered flip-flop clocked by read_clk)
+  Endpoint: read_data[4]
+            (output port clocked by v_read_clk)
+  Path Group: v_read_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  fifo_memory        500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock read_clk (rise edge)                             0.000      0.000
+  clock network delay (ideal)                            1.000      1.000
+  memory/read_data_reg[4]/CLK (DFFR_E)                   0.000      1.000 r
+  memory/read_data_reg[4]/Q (DFFR_E)                     0.319      1.319 r
+  memory/U254/Z (INVERT_J)                               0.054      1.374 f
+  memory/U222/Z (INVERT_O)                               0.055      1.428 r
+  memory/read_data[4] (fifo_memory)                      0.000      1.428 r
+  read_data[4] (out)                                     0.002      1.431 r
+  data arrival time                                                 1.431
+
+  clock v_read_clk (rise edge)                          17.000     17.000
+  clock network delay (ideal)                            0.000     17.000
+  output external delay                                 -1.000     16.000
+  data required time                                               16.000
+  --------------------------------------------------------------------------
+  data required time                                               16.000
+  data arrival time                                                -1.431
+  --------------------------------------------------------------------------
+  slack (MET)                                                      14.569
+
+
+  Startpoint: read_ctrl/empty_reg
+              (rising edge-triggered flip-flop clocked by read_clk)
+  Endpoint: empty (output port clocked by v_read_clk)
+  Path Group: v_read_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  read_control_logic 500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock read_clk (rise edge)                             0.000      0.000
+  clock network delay (ideal)                            1.000      1.000
+  read_ctrl/empty_reg/CLK (DFFS_E)                       0.000      1.000 r
+  read_ctrl/empty_reg/QBAR (DFFS_E)                      0.231      1.231 f
+  read_ctrl/U36/Z (INVERT_H)                             0.064      1.295 r
+  read_ctrl/U33/Z (INVERT_K)                             0.046      1.342 f
+  read_ctrl/U35/Z (INVERT_O)                             0.052      1.394 r
+  read_ctrl/empty (read_control_logic)                   0.000      1.394 r
+  empty (out)                                            0.002      1.396 r
+  data arrival time                                                 1.396
+
+  clock v_read_clk (rise edge)                          17.000     17.000
+  clock network delay (ideal)                            0.000     17.000
+  output external delay                                 -1.000     16.000
+  data required time                                               16.000
+  --------------------------------------------------------------------------
+  data required time                                               16.000
+  data arrival time                                                -1.396
+  --------------------------------------------------------------------------
+  slack (MET)                                                      14.604
+
+
+  Startpoint: memory/read_data_reg[3]
+              (rising edge-triggered flip-flop clocked by read_clk)
+  Endpoint: read_data[3]
+            (output port clocked by v_read_clk)
+  Path Group: v_read_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  fifo_memory        500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock read_clk (rise edge)                             0.000      0.000
+  clock network delay (ideal)                            1.000      1.000
+  memory/read_data_reg[3]/CLK (DFFR_E)                   0.000      1.000 r
+  memory/read_data_reg[3]/QBAR (DFFR_E)                  0.229      1.229 f
+  memory/U52/Z (INVERT_I)                                0.059      1.288 r
+  memory/U51/Z (INVERT_J)                                0.046      1.333 f
+  memory/U216/Z (INVERT_O)                               0.052      1.385 r
+  memory/read_data[3] (fifo_memory)                      0.000      1.385 r
+  read_data[3] (out)                                     0.002      1.387 r
+  data arrival time                                                 1.387
+
+  clock v_read_clk (rise edge)                          17.000     17.000
+  clock network delay (ideal)                            0.000     17.000
+  output external delay                                 -1.000     16.000
+  data required time                                               16.000
+  --------------------------------------------------------------------------
+  data required time                                               16.000
+  data arrival time                                                -1.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      14.613
+
+
+  Startpoint: memory/read_data_reg[1]
+              (rising edge-triggered flip-flop clocked by read_clk)
+  Endpoint: read_data[1]
+            (output port clocked by v_read_clk)
+  Path Group: v_read_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  fifo_memory        500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock read_clk (rise edge)                             0.000      0.000
+  clock network delay (ideal)                            1.000      1.000
+  memory/read_data_reg[1]/CLK (DFFR_E)                   0.000      1.000 r
+  memory/read_data_reg[1]/QBAR (DFFR_E)                  0.229      1.229 f
+  memory/U54/Z (INVERT_I)                                0.059      1.288 r
+  memory/U53/Z (INVERT_J)                                0.046      1.333 f
+  memory/U212/Z (INVERT_O)                               0.052      1.385 r
+  memory/read_data[1] (fifo_memory)                      0.000      1.385 r
+  read_data[1] (out)                                     0.002      1.387 r
+  data arrival time                                                 1.387
+
+  clock v_read_clk (rise edge)                          17.000     17.000
+  clock network delay (ideal)                            0.000     17.000
+  output external delay                                 -1.000     16.000
+  data required time                                               16.000
+  --------------------------------------------------------------------------
+  data required time                                               16.000
+  data arrival time                                                -1.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      14.613
+
+
+  Startpoint: memory/read_data_reg[0]
+              (rising edge-triggered flip-flop clocked by read_clk)
+  Endpoint: read_data[0]
+            (output port clocked by v_read_clk)
+  Path Group: v_read_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  fifo_memory        500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock read_clk (rise edge)                             0.000      0.000
+  clock network delay (ideal)                            1.000      1.000
+  memory/read_data_reg[0]/CLK (DFFR_E)                   0.000      1.000 r
+  memory/read_data_reg[0]/QBAR (DFFR_E)                  0.229      1.229 f
+  memory/U56/Z (INVERT_I)                                0.059      1.288 r
+  memory/U55/Z (INVERT_J)                                0.046      1.333 f
+  memory/U211/Z (INVERT_O)                               0.052      1.385 r
+  memory/read_data[0] (fifo_memory)                      0.000      1.385 r
+  read_data[0] (out)                                     0.002      1.387 r
+  data arrival time                                                 1.387
+
+  clock v_read_clk (rise edge)                          17.000     17.000
+  clock network delay (ideal)                            0.000     17.000
+  output external delay                                 -1.000     16.000
+  data required time                                               16.000
+  --------------------------------------------------------------------------
+  data required time                                               16.000
+  data arrival time                                                -1.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      14.613
+
+
+  Startpoint: write_ctrl/full_reg
+              (rising edge-triggered flip-flop clocked by write_clk)
+  Endpoint: full (output port clocked by v_write_clk)
+  Path Group: v_write_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  write_control_logic
+                     500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock write_clk (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            1.000      1.000
+  write_ctrl/full_reg/CLK (DFFR_K)                       0.000      1.000 r
+  write_ctrl/full_reg/QBAR (DFFR_K)                      0.330      1.330 f
+  write_ctrl/U42/Z (INVERT_H)                            0.044      1.374 r
+  write_ctrl/U8/Z (INVERT_J)                             0.044      1.418 f
+  write_ctrl/U41/Z (INVERT_O)                            0.052      1.470 r
+  write_ctrl/full (write_control_logic)                  0.000      1.470 r
+  full (out)                                             0.002      1.472 r
+  data arrival time                                                 1.472
+
+  clock v_write_clk (rise edge)                         10.000     10.000
+  clock network delay (ideal)                            0.000     10.000
+  output external delay                                 -1.000      9.000
+  data required time                                                9.000
+  --------------------------------------------------------------------------
+  data required time                                                9.000
+  data arrival time                                                -1.472
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.528
+
+
+  Startpoint: write_ctrl/full_reg
+              (rising edge-triggered flip-flop clocked by write_clk)
+  Endpoint: full (output port clocked by v_write_clk)
+  Path Group: v_write_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  write_control_logic
+                     500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock write_clk (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            1.000      1.000
+  write_ctrl/full_reg/CLK (DFFR_K)                       0.000      1.000 r
+  write_ctrl/full_reg/QBAR (DFFR_K)                      0.233      1.233 r
+  write_ctrl/U42/Z (INVERT_H)                            0.037      1.270 f
+  write_ctrl/U8/Z (INVERT_J)                             0.048      1.318 r
+  write_ctrl/U41/Z (INVERT_O)                            0.046      1.364 f
+  write_ctrl/full (write_control_logic)                  0.000      1.364 f
+  full (out)                                             0.002      1.366 f
+  data arrival time                                                 1.366
+
+  clock v_write_clk (rise edge)                         10.000     10.000
+  clock network delay (ideal)                            0.000     10.000
+  output external delay                                 -1.000      9.000
+  data required time                                                9.000
+  --------------------------------------------------------------------------
+  data required time                                                9.000
+  data arrival time                                                -1.366
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.634
+
+
+  Startpoint: write_ctrl/full_reg
+              (rising edge-triggered flip-flop clocked by write_clk)
+  Endpoint: write_ctrl/full_reg
+            (rising edge-triggered flip-flop clocked by write_clk)
+  Path Group: write_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  write_control_logic
+                     500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock write_clk (rise edge)             0.000      0.000
+  clock network delay (ideal)             1.000      1.000
+  write_ctrl/full_reg/CLK (DFFR_K)        0.000      1.000 r
+  write_ctrl/full_reg/Q (DFFR_K)          0.266      1.266 r
+  write_ctrl/U20/Z (NOR2_D)               0.065      1.331 f
+  write_ctrl/U37/Z (INVERT_H)             0.063      1.394 r
+  write_ctrl/U38/Z (INVERT_F)             0.053      1.447 f
+  write_ctrl/U34/Z (AND2_H)               0.082      1.529 f
+  write_ctrl/U35/Z (INVERT_D)             0.056      1.585 r
+  write_ctrl/U5/Z (INVERT_E)              0.058      1.643 f
+  write_ctrl/U33/Z (INVERT_H)             0.054      1.697 r
+  write_ctrl/U23/Z (NOR2_D)               0.067      1.763 f
+  write_ctrl/U21/Z (INVERT_F)             0.051      1.814 r
+  write_ctrl/U22/Z (INVERT_H)             0.047      1.861 f
+  write_ctrl/U19/Z (NAND2_E)              0.055      1.916 r
+  write_ctrl/U7/Z (XOR2_C)                0.109      2.025 r
+  write_ctrl/U25/Z (INVERT_H)             0.056      2.081 f
+  write_ctrl/U44/Z (XOR2_B)               0.137      2.218 f
+  write_ctrl/U6/Z (AND4_F)                0.150      2.367 f
+  write_ctrl/full_reg/D (DFFR_K)          0.000      2.368 f
+  data arrival time                                  2.368
+
+  clock write_clk (rise edge)            10.000     10.000
+  clock network delay (ideal)             1.000     11.000
+  clock uncertainty                      -0.700     10.300
+  write_ctrl/full_reg/CLK (DFFR_K)        0.000     10.300 r
+  library setup time                     -0.223     10.077
+  data required time                                10.077
+  -----------------------------------------------------------
+  data required time                                10.077
+  data arrival time                                 -2.368
+  -----------------------------------------------------------
+  slack (MET)                                        7.710
+
+
+  Startpoint: write_ctrl/full_reg
+              (rising edge-triggered flip-flop clocked by write_clk)
+  Endpoint: write_ctrl/full_reg
+            (rising edge-triggered flip-flop clocked by write_clk)
+  Path Group: write_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  write_control_logic
+                     500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock write_clk (rise edge)             0.000      0.000
+  clock network delay (ideal)             1.000      1.000
+  write_ctrl/full_reg/CLK (DFFR_K)        0.000      1.000 r
+  write_ctrl/full_reg/Q (DFFR_K)          0.266      1.266 r
+  write_ctrl/U20/Z (NOR2_D)               0.065      1.331 f
+  write_ctrl/U37/Z (INVERT_H)             0.063      1.394 r
+  write_ctrl/U38/Z (INVERT_F)             0.053      1.447 f
+  write_ctrl/U34/Z (AND2_H)               0.082      1.529 f
+  write_ctrl/U35/Z (INVERT_D)             0.056      1.585 r
+  write_ctrl/U5/Z (INVERT_E)              0.058      1.643 f
+  write_ctrl/U33/Z (INVERT_H)             0.054      1.697 r
+  write_ctrl/U23/Z (NOR2_D)               0.067      1.763 f
+  write_ctrl/U21/Z (INVERT_F)             0.051      1.814 r
+  write_ctrl/U22/Z (INVERT_H)             0.047      1.861 f
+  write_ctrl/U19/Z (NAND2_E)              0.055      1.916 r
+  write_ctrl/U7/Z (XOR2_C)                0.080      1.996 f
+  write_ctrl/U25/Z (INVERT_H)             0.072      2.068 r
+  write_ctrl/U44/Z (XOR2_B)               0.103      2.171 f
+  write_ctrl/U6/Z (AND4_F)                0.150      2.320 f
+  write_ctrl/full_reg/D (DFFR_K)          0.000      2.320 f
+  data arrival time                                  2.320
+
+  clock write_clk (rise edge)            10.000     10.000
+  clock network delay (ideal)             1.000     11.000
+  clock uncertainty                      -0.700     10.300
+  write_ctrl/full_reg/CLK (DFFR_K)        0.000     10.300 r
+  library setup time                     -0.223     10.077
+  data required time                                10.077
+  -----------------------------------------------------------
+  data required time                                10.077
+  data arrival time                                 -2.320
+  -----------------------------------------------------------
+  slack (MET)                                        7.757
+
+
+  Startpoint: write_ctrl/full_reg
+              (rising edge-triggered flip-flop clocked by write_clk)
+  Endpoint: write_ctrl/full_reg
+            (rising edge-triggered flip-flop clocked by write_clk)
+  Path Group: write_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  write_control_logic
+                     500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock write_clk (rise edge)             0.000      0.000
+  clock network delay (ideal)             1.000      1.000
+  write_ctrl/full_reg/CLK (DFFR_K)        0.000      1.000 r
+  write_ctrl/full_reg/Q (DFFR_K)          0.266      1.266 r
+  write_ctrl/U20/Z (NOR2_D)               0.065      1.331 f
+  write_ctrl/U37/Z (INVERT_H)             0.063      1.394 r
+  write_ctrl/U38/Z (INVERT_F)             0.053      1.447 f
+  write_ctrl/U34/Z (AND2_H)               0.082      1.529 f
+  write_ctrl/U35/Z (INVERT_D)             0.056      1.585 r
+  write_ctrl/U5/Z (INVERT_E)              0.058      1.643 f
+  write_ctrl/U33/Z (INVERT_H)             0.054      1.697 r
+  write_ctrl/U23/Z (NOR2_D)               0.067      1.763 f
+  write_ctrl/U21/Z (INVERT_F)             0.051      1.814 r
+  write_ctrl/U22/Z (INVERT_H)             0.047      1.861 f
+  write_ctrl/U19/Z (NAND2_E)              0.055      1.916 r
+  write_ctrl/U7/Z (XOR2_C)                0.109      2.025 r
+  write_ctrl/U25/Z (INVERT_H)             0.056      2.081 f
+  write_ctrl/U44/Z (XOR2_B)               0.134      2.215 r
+  write_ctrl/U6/Z (AND4_F)                0.144      2.359 r
+  write_ctrl/full_reg/D (DFFR_K)          0.000      2.359 r
+  data arrival time                                  2.359
+
+  clock write_clk (rise edge)            10.000     10.000
+  clock network delay (ideal)             1.000     11.000
+  clock uncertainty                      -0.700     10.300
+  write_ctrl/full_reg/CLK (DFFR_K)        0.000     10.300 r
+  library setup time                     -0.158     10.142
+  data required time                                10.142
+  -----------------------------------------------------------
+  data required time                                10.142
+  data arrival time                                 -2.359
+  -----------------------------------------------------------
+  slack (MET)                                        7.783
+
+
+  Startpoint: write_ctrl/full_reg
+              (rising edge-triggered flip-flop clocked by write_clk)
+  Endpoint: write_ctrl/full_reg
+            (rising edge-triggered flip-flop clocked by write_clk)
+  Path Group: write_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  write_control_logic
+                     500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock write_clk (rise edge)             0.000      0.000
+  clock network delay (ideal)             1.000      1.000
+  write_ctrl/full_reg/CLK (DFFR_K)        0.000      1.000 r
+  write_ctrl/full_reg/Q (DFFR_K)          0.266      1.266 r
+  write_ctrl/U20/Z (NOR2_D)               0.065      1.331 f
+  write_ctrl/U37/Z (INVERT_H)             0.063      1.394 r
+  write_ctrl/U38/Z (INVERT_F)             0.053      1.447 f
+  write_ctrl/U34/Z (AND2_H)               0.082      1.529 f
+  write_ctrl/U35/Z (INVERT_D)             0.056      1.585 r
+  write_ctrl/U5/Z (INVERT_E)              0.058      1.643 f
+  write_ctrl/U33/Z (INVERT_H)             0.054      1.697 r
+  write_ctrl/U23/Z (NOR2_D)               0.067      1.763 f
+  write_ctrl/U21/Z (INVERT_F)             0.051      1.814 r
+  write_ctrl/U22/Z (INVERT_H)             0.047      1.861 f
+  write_ctrl/U19/Z (NAND2_E)              0.055      1.916 r
+  write_ctrl/U7/Z (XOR2_C)                0.080      1.996 f
+  write_ctrl/U25/Z (INVERT_H)             0.072      2.068 r
+  write_ctrl/U44/Z (XOR2_B)               0.135      2.203 r
+  write_ctrl/U6/Z (AND4_F)                0.144      2.347 r
+  write_ctrl/full_reg/D (DFFR_K)          0.000      2.347 r
+  data arrival time                                  2.347
+
+  clock write_clk (rise edge)            10.000     10.000
+  clock network delay (ideal)             1.000     11.000
+  clock uncertainty                      -0.700     10.300
+  write_ctrl/full_reg/CLK (DFFR_K)        0.000     10.300 r
+  library setup time                     -0.158     10.142
+  data required time                                10.142
+  -----------------------------------------------------------
+  data required time                                10.142
+  data arrival time                                 -2.347
+  -----------------------------------------------------------
+  slack (MET)                                        7.795
+
+
+  Startpoint: write_ctrl/write_addr_reg[0]
+              (rising edge-triggered flip-flop clocked by write_clk)
+  Endpoint: write_ctrl/full_reg
+            (rising edge-triggered flip-flop clocked by write_clk)
+  Path Group: write_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  write_control_logic
+                     500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock write_clk (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            1.000      1.000
+  write_ctrl/write_addr_reg[0]/CLK (DFFR_K)              0.000      1.000 r
+  write_ctrl/write_addr_reg[0]/Q (DFFR_K)                0.271      1.271 r
+  write_ctrl/U4/Z (INVERT_I)                             0.045      1.316 f
+  write_ctrl/U3/Z (INVERT_N)                             0.053      1.369 r
+  write_ctrl/U34/Z (AND2_H)                              0.071      1.440 r
+  write_ctrl/U35/Z (INVERT_D)                            0.050      1.489 f
+  write_ctrl/U5/Z (INVERT_E)                             0.060      1.549 r
+  write_ctrl/U33/Z (INVERT_H)                            0.048      1.597 f
+  write_ctrl/U23/Z (NOR2_D)                              0.072      1.669 r
+  write_ctrl/U21/Z (INVERT_F)                            0.045      1.715 f
+  write_ctrl/U22/Z (INVERT_H)                            0.053      1.768 r
+  write_ctrl/U19/Z (NAND2_E)                             0.043      1.811 f
+  write_ctrl/U7/Z (XOR2_C)                               0.115      1.926 r
+  write_ctrl/U25/Z (INVERT_H)                            0.056      1.982 f
+  write_ctrl/U44/Z (XOR2_B)                              0.137      2.119 f
+  write_ctrl/U6/Z (AND4_F)                               0.150      2.269 f
+  write_ctrl/full_reg/D (DFFR_K)                         0.000      2.269 f
+  data arrival time                                                 2.269
+
+  clock write_clk (rise edge)                           10.000     10.000
+  clock network delay (ideal)                            1.000     11.000
+  clock uncertainty                                     -0.700     10.300
+  write_ctrl/full_reg/CLK (DFFR_K)                       0.000     10.300 r
+  library setup time                                    -0.223     10.077
+  data required time                                               10.077
+  --------------------------------------------------------------------------
+  data required time                                               10.077
+  data arrival time                                                -2.269
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.809
+
+
+1
